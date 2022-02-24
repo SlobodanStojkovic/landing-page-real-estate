@@ -184,6 +184,14 @@ a {
   background: $lightblue;
   padding: 50px 165px 0;
   margin-bottom: 120px;
+
+  @media (min-width: 1024px) {
+    padding: 50px 97px 165px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 50px 97px 165px;
+  }
 }
 
 .logo-and-nav {
@@ -191,10 +199,28 @@ a {
   gap: 65px;
   justify-content: space-between;
   padding: 0 0 40px 0;
+
+  @media (min-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    gap: 65px;
+  }
 }
 
 .header__logo {
   align-self: center;
+
+  @media (min-width: 768px) {
+    align-self: flex-start;
+  }
+
+  @media (min-width: 1024px) {
+    align-self: center;
+  }
 }
 
 .header nav {
@@ -205,6 +231,16 @@ a {
 .nav-list-div {
   display: flex;
   gap: 65px;
+
+  @media (min-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    gap: 65px;
+  }
 }
 
 .navlist {
@@ -250,11 +286,27 @@ a {
 
 .description-and-house {
   display: flex;
+
+  @media (min-width: 768px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
 }
 
 .header__description {
   width: 50%;
   padding: 0 55px 0 0;
+
+  @media (min-width: 768px) {
+    width: unset;
+  }
+
+  @media (min-width: 1024px) {
+    width: 50%;
+  }
 
   & h5 {
     font-family: $popins;
@@ -290,6 +342,14 @@ a {
     padding: 18px 38px;
     background-color: $darkblue;
 
+    @media (min-width: 768px) {
+      margin: 0 0 40px;
+    }
+
+    @media (min-width: 1024px) {
+      margin: 0;
+    }
+
     &:hover {
       color: $black;
       background-color: $white;
@@ -317,12 +377,31 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 0 0 100px 0;
+
+  @media (min-width: 768px) {
+    padding: 0 0 30px 0;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0 0 100px 0;
+  }
 }
 
 .main__logos {
   display: flex;
   justify-content: space-between;
   padding: 0 0 160px;
+
+  @media (min-width: 768px) {
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 0 60px;
+  }
+
+  @media (min-width: 1024px) {
+    flex-wrap: unset;
+    padding: 0 0 160px;
+  }
 
   & img {
     align-self: center;
@@ -334,6 +413,14 @@ a {
   flex-direction: column;
   align-items: center;
   padding: 0 0 120px;
+
+  @media (min-width: 768px) {
+    padding: 0 0 40px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 0 0 120px;
+  }
 
   & h3 {
     font-family: $popins;
@@ -384,6 +471,14 @@ a {
   background: $whiteblue;
   padding: 110px 165px;
 
+  @media (min-width: 768px) {
+    padding: 50px 65px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 110px 165px;
+  }
+
   & h2 {
     font-family: Poppins;
     font-weight: 600;
@@ -399,6 +494,16 @@ a {
   justify-content: space-between;
   padding: 0 0 70px;
 
+  @media (min-width: 768px) {
+    flex-direction: column;
+    padding: 0 0 30px;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    padding: 0 0 70px;
+  }
+
   & p {
     font-family: $popins;
     font-size: 16px;
@@ -413,6 +518,14 @@ a {
     line-height: 27px;
     text-align: right;
     color: #0689ff;
+
+    @media (min-width: 768px) {
+      text-align: start;
+    }
+
+    @media (min-width: 1024px) {
+      text-align: right;
+    }
   }
 }
 
@@ -448,6 +561,14 @@ a {
       padding: 0 20px 8px;
       margin: 0;
 
+      @media (min-width: 768px) {
+        flex-direction: column;
+      }
+
+      @media (min-width: 1024px) {
+        flex-direction: row;
+      }
+
       & li img {
         padding-right: 8px;
 
@@ -465,6 +586,18 @@ a {
 
 .statistics {
   padding: 125px 196px 105px;
+
+  @media (min-width: 768px) {
+    padding: 60px 30px 0px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 125px 50px 105px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 125px 196px 105px;
+  }
 }
 
 .users {
@@ -474,6 +607,18 @@ a {
   border-radius: 0px 0px 12px 12px;
   background: $white;
   padding: 45px 25px;
+
+  @media (min-width: 768px) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1024px) {
+    margin: unset;
+  }
+
+  @media (min-width: 1440px) {
+    margin: unset;
+  }
 
   & p {
     font-family: $popins;
@@ -515,9 +660,44 @@ a {
   top: -325px;
   left: -26px;
 
+  @media (min-width: 768px) {
+    flex-direction: column;
+    position: unset;
+    top: unset;
+    left: unset;
+  }
+
+  @media (min-width: 1024px) {
+    position: relative;
+    flex-direction: row;
+    top: -325px;
+    left: -26px;
+  }
+
+  @media (min-width: 1440px) {
+    position: relative;
+    top: -325px;
+    left: -26px;
+  }
+
   &__text {
     padding: 160px 0;
     width: 30%;
+
+    @media (min-width: 768px) {
+      padding: 30px 45px;
+      width: unset;
+    }
+
+    @media (min-width: 1024px) {
+      padding: 160px 0;
+      width: 30%;
+    }
+
+    @media (min-width: 1440px) {
+      padding: 160px 0;
+      width: 30%;
+    }
   }
 
   & h3 {
@@ -545,8 +725,7 @@ a {
 
 .sale-sold {
   display: flex;
-  justify-content: center;
-  gap: 220px;
+  justify-content: space-around;
   padding: 0 0 100px;
   position: relative;
   top: -400px;
@@ -579,16 +758,55 @@ a {
   top: -500px;
   margin: 0 165px;
 
+  @media (min-width: 768px) {
+    position: unset;
+    top: unset;
+    margin: 0 20px 20px;
+  }
+
+  @media (min-width: 1024px) {
+    position: relative;
+    top: -500px;
+    margin: 0 165px;
+  }
+
+  @media (min-width: 1440px) {
+    position: relative;
+    top: -500px;
+    margin: 0 165px;
+  }
+
   & img {
     height: 438px;
     position: relative;
     top: -20px;
+  }
+
+  @media (min-width: 1024px) {
+    margin: 0 65px;
+  }
+
+  @media (min-width: 1440px) {
+    margin: 0 165px;
   }
 }
 
 .get-started-now__text {
   color: $white;
   padding: 150px 0 0 80px;
+
+  @media (min-width: 768px) {
+    padding: 20px 0 0 50px;
+    align-self: center;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 150px 0 0 80px;
+  }
+
+  @media (min-width: 1440px) {
+    padding: 150px 0 0 80px;
+  }
 
   & h3 {
     font-family: $popins;
@@ -624,12 +842,45 @@ a {
   top: -400px;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 768px) {
+    padding: 0 65px 30px;
+    position: unset;
+    top: unset;
+  }
+
+  @media (min-width: 1024px) {
+    position: relative;
+    top: -400px;
+    padding: 0 65px 60px;
+  }
+
+  @media (min-width: 1440px) {
+    position: relative;
+    top: -400px;
+    padding: 0 165px 60px;
+  }
 }
 
 .footer__navigation {
   display: flex;
   gap: 185px;
   padding: 0 0 80px;
+
+  @media (min-width: 768px) {
+    gap: 100px;
+    padding: 0 0 30px;
+  }
+
+  @media (min-width: 1024px) {
+    gap: 140px;
+    padding: 0 0 40px;
+  }
+
+  @media (min-width: 1440px) {
+    gap: 185px;
+    padding: 0 0 80px;
+  }
 }
 
 .product,
