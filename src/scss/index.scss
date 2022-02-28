@@ -168,6 +168,8 @@ $graywhite: #a7a7a7;
 $darkblue: #0f1b4c;
 $darkerblue: #000336;
 $copyright: #c2c2c2;
+$guides: #3b3c45;
+$links: #0689ff;
 $lato: "Lato";
 $popins: "Poppins";
 
@@ -182,21 +184,18 @@ a {
 
 .header {
   background: $lightblue;
-  padding: 50px 165px 0;
+  padding: 50px 35px 0;
   margin-bottom: 120px;
 
   @media (min-width: 1024px) {
-    padding: 50px 97px 165px;
-  }
-
-  @media (min-width: 1440px) {
-    padding: 50px 97px 165px;
+    padding: 50px 97px 0px;
   }
 }
 
 .logo-and-nav {
   display: flex;
-  gap: 65px;
+  flex-direction: column;
+  gap: 0;
   justify-content: space-between;
   padding: 0 0 40px 0;
 
@@ -207,15 +206,17 @@ a {
 
   @media (min-width: 1024px) {
     flex-direction: row;
-    gap: 65px;
+    gap: 50px;
   }
 }
 
 .header__logo {
-  align-self: center;
+  align-self: flex-start;
+  padding: 0 0 20px;
 
   @media (min-width: 768px) {
     align-self: flex-start;
+    padding: 0;
   }
 
   @media (min-width: 1024px) {
@@ -226,15 +227,22 @@ a {
 .header nav {
   display: flex;
   gap: 20%;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    margin: unset;
+  }
 }
 
 .nav-list-div {
   display: flex;
-  gap: 65px;
+  flex-direction: column;
+  gap: 0;
+  align-self: center;
 
   @media (min-width: 768px) {
-    flex-direction: column;
-    gap: 0;
+    align-self: unset;
+    gap: 20px;
   }
 
   @media (min-width: 1024px) {
@@ -245,17 +253,32 @@ a {
 
 .navlist {
   display: flex;
+  flex-direction: column;
   gap: 30px;
   align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .register {
   & ul {
     display: flex;
+    flex-direction: column;
     gap: 18px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
 
     & li:nth-child(1) {
       display: flex;
+      align-self: center;
+
+      @media (min-width: 768px) {
+        align-self: unset;
+      }
 
       & a {
         align-self: center;
@@ -267,6 +290,11 @@ a {
       background-color: $darkblue;
       padding: 10px 20px;
       border-radius: 8px;
+      align-self: center;
+
+      @media (min-width: 768px) {
+        align-self: unset;
+      }
 
       &:hover {
         background-color: $copyright;
@@ -286,10 +314,7 @@ a {
 
 .description-and-house {
   display: flex;
-
-  @media (min-width: 768px) {
-    flex-direction: column;
-  }
+  flex-direction: column;
 
   @media (min-width: 1024px) {
     flex-direction: row;
@@ -297,11 +322,11 @@ a {
 }
 
 .header__description {
-  width: 50%;
-  padding: 0 55px 0 0;
+  text-align: center;
 
   @media (min-width: 768px) {
-    width: unset;
+    padding: 0 55px 0 0;
+    text-align: unset;
   }
 
   @media (min-width: 1024px) {
@@ -321,10 +346,15 @@ a {
   & h1 {
     font-family: $popins;
     font-weight: bold;
-    font-size: 64px;
-    line-height: 76px;
+    font-size: 50px;
+    line-height: 64px;
     color: $darkerblue;
     padding: 0 0 30px;
+
+    @media (min-width: 1024px) {
+      font-size: 64px;
+      line-height: 76px;
+    }
   }
 
   & p {
@@ -341,6 +371,7 @@ a {
     border-radius: 12px;
     padding: 18px 38px;
     background-color: $darkblue;
+    margin: 0 0 40px;
 
     @media (min-width: 768px) {
       margin: 0 0 40px;
@@ -360,7 +391,11 @@ a {
 .main__reviews {
   display: flex;
   flex-direction: column;
-  padding: 0 165px;
+  padding: 0 45px;
+
+  @media (min-width: 768px) {
+    padding: 0 165px;
+  }
 }
 
 .logo-and-stars {
@@ -376,11 +411,7 @@ a {
 .main__subtitle-and-ratings {
   display: flex;
   justify-content: space-between;
-  padding: 0 0 100px 0;
-
-  @media (min-width: 768px) {
-    padding: 0 0 30px 0;
-  }
+  padding: 0 0 30px 0;
 
   @media (min-width: 1024px) {
     padding: 0 0 100px 0;
@@ -390,17 +421,29 @@ a {
 .main__logos {
   display: flex;
   justify-content: space-between;
-  padding: 0 0 160px;
+  padding: 0 0 60px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 15px;
 
   @media (min-width: 768px) {
     flex-wrap: wrap;
+    flex-direction: row;
     gap: 30px;
     padding: 0 0 60px;
   }
 
   @media (min-width: 1024px) {
-    flex-wrap: unset;
+    padding: 0 0 100px;
+    row-gap: 20px;
+    column-gap: 60px;
+    justify-content: center;
+  }
+
+  @media (min-width: 1440px) {
+    flex-wrap: nowrap;
     padding: 0 0 160px;
+    justify-content: space-between;
   }
 
   & img {
@@ -412,7 +455,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 0 120px;
+  padding: 20px;
 
   @media (min-width: 768px) {
     padding: 0 0 40px;
@@ -463,13 +506,53 @@ a {
 
 .guides {
   display: flex;
-  gap: 140px;
+  flex-direction: column;
+  gap: 20px;
   padding: 0 0 50px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 140px;
+  }
+}
+
+.buyer-guides,
+.renter-guides,
+.seller-guides {
+  @media (min-width: 1440px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & img {
+    align-self: center;
+    padding: 0 0 23px;
+  }
+
+  & h5 {
+    font-family: $popins;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    color: $guides;
+    padding: 0 0 10px;
+  }
+
+  & a {
+    font-family: $popins;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: $links;
+    padding: 0 0 10px;
+  }
 }
 
 .featured-properties {
   background: $whiteblue;
-  padding: 110px 165px;
+  padding: 40px 40px;
 
   @media (min-width: 768px) {
     padding: 50px 65px;
@@ -493,8 +576,10 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 0 0 70px;
+  gap: 30px;
 
   @media (min-width: 768px) {
+    gap: 0;
     flex-direction: column;
     padding: 0 0 30px;
   }
@@ -509,6 +594,13 @@ a {
     font-size: 16px;
     line-height: 30px;
     color: $middlegray;
+    width: 50%;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      width: unset;
+      text-align: unset;
+    }
   }
 
   & a {
@@ -516,8 +608,8 @@ a {
     font-weight: 600;
     font-size: 18px;
     line-height: 27px;
-    text-align: right;
-    color: #0689ff;
+    color: $links;
+    text-align: center;
 
     @media (min-width: 768px) {
       text-align: start;
@@ -533,6 +625,11 @@ a {
   display: flex;
   gap: 30px;
   justify-content: center;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .property {
@@ -541,6 +638,7 @@ a {
   &-3 {
     background: $white;
     border-radius: 12px;
+    transition: transform 0.3s;
 
     & h4 {
       font-family: $popins;
@@ -577,6 +675,13 @@ a {
         }
       }
     }
+
+    &:hover {
+      cursor: pointer;
+      @media (min-width: 1024px) {
+        transform: scale(1.1);
+      }
+    }
   }
 }
 
@@ -585,11 +690,7 @@ a {
 }
 
 .statistics {
-  padding: 125px 196px 105px;
-
-  @media (min-width: 768px) {
-    padding: 60px 30px 0px;
-  }
+  padding: 60px 30px 0px;
 
   @media (min-width: 1024px) {
     padding: 125px 50px 105px;
@@ -607,16 +708,13 @@ a {
   border-radius: 0px 0px 12px 12px;
   background: $white;
   padding: 45px 25px;
+  margin: 0 auto;
 
   @media (min-width: 768px) {
     margin: 0 auto;
   }
 
   @media (min-width: 1024px) {
-    margin: unset;
-  }
-
-  @media (min-width: 1440px) {
     margin: unset;
   }
 
@@ -655,48 +753,46 @@ a {
 
 .house-and-text {
   display: flex;
+  flex-direction: column;
   z-index: -1;
-  position: relative;
-  top: -325px;
-  left: -26px;
+  text-align: center;
 
   @media (min-width: 768px) {
     flex-direction: column;
-    position: unset;
-    top: unset;
-    left: unset;
+    text-align: unset;
+    position: relative;
+    top: -85px;
+    z-index: -1;
+    left: 5%;
   }
 
   @media (min-width: 1024px) {
-    position: relative;
     flex-direction: row;
     top: -325px;
     left: -26px;
   }
 
-  @media (min-width: 1440px) {
-    position: relative;
-    top: -325px;
-    left: -26px;
+  & img {
+    width: 100vw;
+
+    @media (min-width: 768px) {
+      width: unset;
+    }
   }
 
   &__text {
-    padding: 160px 0;
-    width: 30%;
+    padding: 0 45px 30px;
 
     @media (min-width: 768px) {
-      padding: 30px 45px;
-      width: unset;
+      padding: 30px 0;
+      position: relative;
+      top: -280px;
     }
 
     @media (min-width: 1024px) {
-      padding: 160px 0;
+      padding: 160px 0 0 0;
       width: 30%;
-    }
-
-    @media (min-width: 1440px) {
-      padding: 160px 0;
-      width: 30%;
+      top: unset;
     }
   }
 
@@ -727,16 +823,40 @@ a {
   display: flex;
   justify-content: space-around;
   padding: 0 0 100px;
-  position: relative;
-  top: -400px;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
 
-  & h1 {
+  @media (min-width: 768px) {
+    text-align: start;
+    flex-direction: row;
+    gap: unset;
+    position: relative;
+    top: -300px;
+  }
+
+  @media (min-width: 1024px) {
+    text-align: center;
+    top: -480px;
+    padding: 0;
+  }
+
+  & h2 {
     font-family: $popins;
     font-weight: 600;
-    font-size: 64px;
-    line-height: 64px;
+    font-size: 44px;
+    line-height: 44px;
     color: #000000;
-    padding: 0 0 22px;
+    padding: 0;
+
+    @media (min-width: 768px) {
+      padding: 0 0 22px;
+    }
+
+    @media (min-width: 1024px) {
+      font-size: 64px;
+      line-height: 64px;
+    }
   }
 
   & p {
@@ -752,27 +872,24 @@ a {
   background: $blue;
   border-radius: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   height: 418px;
-  position: relative;
-  top: -500px;
-  margin: 0 165px;
+  margin: 0 20px 110px;
 
   @media (min-width: 768px) {
-    position: unset;
-    top: unset;
+    flex-direction: row;
+    position: relative;
+    top: -300px;
     margin: 0 20px 20px;
   }
 
   @media (min-width: 1024px) {
-    position: relative;
     top: -500px;
-    margin: 0 165px;
+    margin: 0 65px;
   }
 
   @media (min-width: 1440px) {
-    position: relative;
-    top: -500px;
     margin: 0 165px;
   }
 
@@ -780,28 +897,30 @@ a {
     height: 438px;
     position: relative;
     top: -20px;
-  }
+    top: 20px;
+    left: 11%;
 
-  @media (min-width: 1024px) {
-    margin: 0 65px;
-  }
-
-  @media (min-width: 1440px) {
-    margin: 0 165px;
+    @media (min-width: 768px) {
+      left: unset;
+    }
   }
 }
 
 .get-started-now__text {
   color: $white;
-  padding: 150px 0 0 80px;
+  padding: 20px 20px 0px 20px;
+  align-self: center;
+  text-align: center;
 
   @media (min-width: 768px) {
     padding: 20px 0 0 50px;
     align-self: center;
+    text-align: unset;
   }
 
   @media (min-width: 1024px) {
     padding: 150px 0 0 80px;
+    align-self: unset;
   }
 
   @media (min-width: 1440px) {
@@ -837,38 +956,37 @@ a {
 }
 
 .footer {
-  padding: 0 165px 60px;
-  position: relative;
-  top: -400px;
+  padding: 0 65px 30px;
   display: flex;
   flex-direction: column;
 
   @media (min-width: 768px) {
-    padding: 0 65px 30px;
-    position: unset;
-    top: unset;
+    position: relative;
+    top: -300px;
+    padding: 0 65px 50px;
   }
 
   @media (min-width: 1024px) {
-    position: relative;
     top: -400px;
     padding: 0 65px 60px;
   }
 
   @media (min-width: 1440px) {
-    position: relative;
-    top: -400px;
     padding: 0 165px 60px;
   }
 }
 
 .footer__navigation {
   display: flex;
-  gap: 185px;
-  padding: 0 0 80px;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 0 30px;
+  text-align: center;
 
   @media (min-width: 768px) {
-    gap: 100px;
+    text-align: unset;
+    flex-direction: row;
+    gap: 80px;
     padding: 0 0 30px;
   }
 
@@ -908,11 +1026,31 @@ a {
 .socials {
   display: flex;
   gap: 16px;
+  justify-content: center;
+
+  @media (min-width: 768px) {
+    justify-content: unset;
+  }
 }
 
 .copyright {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  & img {
+    align-self: center;
+
+    @media (min-width: 768px) {
+      align-self: unset;
+    }
+  }
 
   & p {
     font-family: $popins;
